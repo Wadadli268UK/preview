@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Wedgbury Furnishings</title>
+    <script>
+      // Preserve clean path for static hosts that fall back to 404.html
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      sessionStorage.setItem('spa_fallback_path', pathname + search + hash);
+      window.location.replace('/');
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

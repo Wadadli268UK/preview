@@ -1,0 +1,8 @@
+{
+  "name": "Artisan Furnishings & Upholstery Store",
+  "description": "Wedgbury Furnishings - UK artisan studio specialising in handmade furnishings, preloved reupholstered furniture, and bespoke upholstery commissions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

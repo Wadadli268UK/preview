@@ -1,0 +1,190 @@
+{
+  "entities": {
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "type": "object",
+      "description": "Global website content, branding, contact details, and copy",
+      "properties": {
+        "businessName": { "type": "string" },
+        "tagline": { "type": "string" },
+        "heroHeading": { "type": "string" },
+        "heroSubheading": { "type": "string" },
+        "logoUrl": { "type": "string" },
+        "heroBannerUrl": { "type": "string" },
+        "madeToOrderHeroUrl": { "type": "string" },
+        "ourStoryHeroImageUrl": { "type": "string" },
+        "artisanName": { "type": "string" },
+        "aboutStory": { "type": "string" },
+        "location": { "type": "string" },
+        "etsyShopUrl": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "instagramHandle": { "type": "string" },
+        "announcementText": { "type": "string" },
+        "showAnnouncement": { "type": "boolean" },
+        "deliveryNotice": { "type": "string" },
+        "workshopAddress": { "type": "string" },
+        "upholsteryHeroHeading": { "type": "string" },
+        "upholsteryHeroSubheading": { "type": "string" },
+        "upholsteryHeroBeforeImage": { "type": "string" },
+        "upholsteryHeroAfterImage": { "type": "string" },
+        "upholsteryHeroBeforeLabel": { "type": "string" },
+        "upholsteryHeroAfterLabel": { "type": "string" },
+        "pastUpholsteryHeading": { "type": "string" },
+        "pastUpholsterySubheading": { "type": "string" },
+        "showPastUpholsteryCarousel": { "type": "boolean" },
+        "pastUpholsteryBgColor": { "type": "string" }
+      }
+    },
+    "Product": {
+      "title": "Product",
+      "type": "object",
+      "description": "Catalog item in the furniture and furnishings store",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "currency": { "type": "string" },
+        "availability": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "description": { "type": "string" },
+        "story": { "type": "string" },
+        "storyBehindThePiece": { "type": "string" },
+        "specificationsAndDimensions": { "type": "string" },
+        "fabric": { "type": "string" },
+        "fabricAndWeave": { "type": "string" },
+        "colour": { "type": "string" },
+        "colourPalette": { "type": "string" },
+        "style": { "type": "string" },
+        "finish": { "type": "string" },
+        "timberFinish": { "type": "string" },
+        "materials": { "type": "array", "items": { "type": "string" } },
+        "materialsUsed": { "type": "array", "items": { "type": "string" } },
+        "marketplace": { "type": "string" },
+        "marketplaceUrl": { "type": "string" },
+        "featured": { "type": "boolean" },
+        "isActive": { "type": "boolean" },
+        "isPastUpholstery": { "type": "boolean" },
+        "leadTime": { "type": "string" },
+        "sku": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "category", "price", "images"]
+    },
+    "PortfolioProject": {
+      "title": "PortfolioProject",
+      "type": "object",
+      "description": "Before and after upholstery case studies",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "furnitureType": { "type": "string" },
+        "beforeImage": { "type": "string" },
+        "afterImage": { "type": "string" },
+        "shortStory": { "type": "string" },
+        "workCompleted": { "type": "array", "items": { "type": "string" } },
+        "fabricUsed": { "type": "string" },
+        "clientLocation": { "type": "string" },
+        "featured": { "type": "boolean" }
+      },
+      "required": ["id", "title", "beforeImage", "afterImage"]
+    },
+    "UpholsteryEnquiry": {
+      "title": "UpholsteryEnquiry",
+      "type": "object",
+      "description": "Customer quote requests and lead submissions",
+      "properties": {
+        "id": { "type": "string" },
+        "submittedAt": { "type": "string" },
+        "status": { "type": "string" },
+        "customer": { "type": "object" },
+        "furnitureType": { "type": "string" },
+        "photos": { "type": "array", "items": { "type": "string" } },
+        "projectDetails": { "type": "string" },
+        "fabricNotes": { "type": "string" },
+        "budgetRange": { "type": "string" },
+        "adminNotes": { "type": "string" }
+      },
+      "required": ["id", "submittedAt", "status", "customer"]
+    },
+    "FAQItem": {
+      "title": "FAQItem",
+      "type": "object",
+      "description": "Frequently asked questions for clients",
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "question": { "type": "string" },
+        "answer": { "type": "string" }
+      },
+      "required": ["id", "question", "answer"]
+    },
+    "AnalyticsEvent": {
+      "title": "AnalyticsEvent",
+      "type": "object",
+      "description": "Conversion and interaction tracking event",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "eventType": { "type": "string" },
+        "label": { "type": "string" },
+        "metadata": { "type": "object" }
+      },
+      "required": ["id", "timestamp", "eventType", "label"]
+    },
+    "MadeToOrderProduct": {
+      "title": "MadeToOrderProduct",
+      "type": "object",
+      "description": "Made-to-order catalog pieces with dimensions, leg options, and visibility status",
+      "properties": {
+        "id": { "type": "string" },
+        "productName": { "type": "string" },
+        "productDescription": { "type": "string" },
+        "productCode": { "type": "string" },
+        "size": { "type": "string" },
+        "finishedDimensions": { "type": "string" },
+        "legOptions": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "imageUrl": { "type": "string" },
+        "startingPrice": { "type": "string" },
+        "leadTime": { "type": "string" },
+        "category": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "productName", "productCode"]
+    }
+  },
+  "firestore": {
+    "site_settings/general": {
+      "schema": "SiteSettings",
+      "description": "Global website content and configurations"
+    },
+    "products/{productId}": {
+      "schema": "Product",
+      "description": "Products in the shop catalogue"
+    },
+    "made_to_order_products/{productId}": {
+      "schema": "MadeToOrderProduct",
+      "description": "Customizable made-to-order catalog pieces displayed on the Made to Order page"
+    },
+    "portfolio/{projectId}": {
+      "schema": "PortfolioProject",
+      "description": "Restoration and upholstery portfolio projects"
+    },
+    "enquiries/{enquiryId}": {
+      "schema": "UpholsteryEnquiry",
+      "description": "Customer quote enquiries and consultation leads"
+    },
+    "faqs/{faqId}": {
+      "schema": "FAQItem",
+      "description": "Helpful customer questions and answers"
+    },
+    "analytics/{eventId}": {
+      "schema": "AnalyticsEvent",
+      "description": "Live analytics and conversions"
+    }
+  }
+}

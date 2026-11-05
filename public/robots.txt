@@ -1,0 +1,24 @@
+# Robots.txt for Wedgbury Furnishings
+# https://www.wedgburyfurnishings.co.uk
+
+User-agent: *
+Allow: /
+Allow: /shop
+Allow: /made-to-order
+Allow: /re-upholstery
+Allow: /portfolio
+Allow: /about
+Allow: /faq
+Allow: /contact
+Allow: /privacy-policy
+Allow: /cookie-policy
+Allow: /terms-of-sale
+
+# Disallow private admin login and dashboard
+Disallow: /admin
+Disallow: /admin5813
+Disallow: /#/admin
+Disallow: /#/admin5813
+
+# Primary XML Sitemap
+Sitemap: https://www.wedgburyfurnishings.co.uk/sitemap.xml
